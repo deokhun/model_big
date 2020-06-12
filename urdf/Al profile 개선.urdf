@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Al profile 개선">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.10528 -0.091997 -0.067082"
+        rpy="0 0 0" />
+      <mass
+        value="2.7531" />
+      <inertia
+        ixx="0.0065612"
+        ixy="-4.3391E-07"
+        ixz="7.9314E-06"
+        iyy="0.0057253"
+        iyz="-4.291E-07"
+        izz="0.01163" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LFS">
+    <inertial>
+      <origin
+        xyz="6.9389E-18 -0.041313 -0.0045"
+        rpy="0 0 0" />
+      <mass
+        value="0.019514" />
+      <inertia
+        ixx="7.6084E-06"
+        ixy="3.211E-23"
+        ixz="-8.2575E-22"
+        iyy="4.2404E-06"
+        iyz="-1.1866E-21"
+        izz="6.5552E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LFS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LFS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFS"
+    type="continuous">
+    <origin
+      xyz="-0.0365 0.036 -0.091297"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="LFS" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LFW">
+    <inertial>
+      <origin
+        xyz="0.03275 -0.055 0.0085"
+        rpy="0 0 0" />
+      <mass
+        value="0.28979" />
+      <inertia
+        ixx="0.00043983"
+        ixy="-4.6524E-37"
+        ixz="-1.5018E-37"
+        iyy="0.00024165"
+        iyz="3.024E-39"
+        izz="0.00024165" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LFW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LFW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFW"
+    type="continuous">
+    <origin
+      xyz="0 -0.014801 0"
+      rpy="0 0 0" />
+    <parent
+      link="LFS" />
+    <child
+      link="LFW" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="RFS">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 -0.041313 -0.0045"
+        rpy="0 0 0" />
+      <mass
+        value="0.019514" />
+      <inertia
+        ixx="7.6084E-06"
+        ixy="-9.5897E-22"
+        ixz="7.6546E-23"
+        iyy="4.2404E-06"
+        iyz="1.7607E-21"
+        izz="6.5552E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RFS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RFS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFS"
+    type="continuous">
+    <origin
+      xyz="-0.0365 -0.224 -0.091297"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="RFS" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RFW">
+    <inertial>
+      <origin
+        xyz="-0.03275 -0.055 0.0085"
+        rpy="0 0 0" />
+      <mass
+        value="0.28979" />
+      <inertia
+        ixx="0.00043983"
+        ixy="-4.6524E-37"
+        ixz="5.1371E-37"
+        iyy="0.00024165"
+        iyz="3.024E-39"
+        izz="0.00024165" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RFW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RFW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFW"
+    type="continuous">
+    <origin
+      xyz="0 -0.014799 0"
+      rpy="0 0 0" />
+    <parent
+      link="RFS" />
+    <child
+      link="RFW" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="LBS">
+    <inertial>
+      <origin
+        xyz="6.9389E-18 -0.067035 -0.0045"
+        rpy="0 0 0" />
+      <mass
+        value="0.36367" />
+      <inertia
+        ixx="0.00028006"
+        ixy="2.2657E-20"
+        ixz="-5.7229E-20"
+        iyy="0.00043029"
+        iyz="-3.0931E-20"
+        izz="0.0002799" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LBS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LBS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBS"
+    type="continuous">
+    <origin
+      xyz="-0.1865 0.036 -0.091297"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="LBS" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LBW">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0045"
+        rpy="0 0 0" />
+      <mass
+        value="0.4849" />
+      <inertia
+        ixx="0.0002376"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002376"
+        iyz="0"
+        izz="0.0002376" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LBW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/LBW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBW"
+    type="continuous">
+    <origin
+      xyz="0 -0.0898 0"
+      rpy="0 0 0" />
+    <parent
+      link="LBS" />
+    <child
+      link="LBW" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="RBS">
+    <inertial>
+      <origin
+        xyz="0 -0.067035 -0.0045"
+        rpy="0 0 0" />
+      <mass
+        value="0.36367" />
+      <inertia
+        ixx="0.00028006"
+        ixy="-5.6302E-20"
+        ixz="1.144E-19"
+        iyy="0.00043029"
+        iyz="-3.0931E-20"
+        izz="0.0002799" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RBS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RBS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBS"
+    type="continuous">
+    <origin
+      xyz="-0.1865 -0.224 -0.091297"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="RBS" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RBW">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0045"
+        rpy="0 0 0" />
+      <mass
+        value="0.4849" />
+      <inertia
+        ixx="0.0002376"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002376"
+        iyz="0"
+        izz="0.0002376" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RBW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/RBW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBW"
+    type="continuous">
+    <origin
+      xyz="0 -0.0898 0"
+      rpy="0 0 0" />
+    <parent
+      link="RBS" />
+    <child
+      link="RBW" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="0.011062 0.0085153 0.00096622"
+        rpy="0 0 0" />
+      <mass
+        value="0.00070067" />
+      <inertia
+        ixx="1.798E-08"
+        ixy="-5.1561E-11"
+        ixz="-2.3337E-11"
+        iyy="2.8868E-08"
+        iyz="-5.7227E-12"
+        izz="4.6383E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_link"
+    type="fixed">
+    <origin
+      xyz="-0.033937 -0.036407 0.035203"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fcam">
+    <inertial>
+      <origin
+        xyz="-0.051729 0.061784 0.068723"
+        rpy="0 0 0" />
+      <mass
+        value="0.043612" />
+      <inertia
+        ixx="4.2948E-06"
+        ixy="-8.8579E-10"
+        ixz="-1.0181E-09"
+        iyy="2.2106E-05"
+        iyz="2.1758E-08"
+        izz="2.3571E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/fcam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/fcam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fcam"
+    type="prismatic">
+    <origin
+      xyz="-0.069277 -0.045536 -0.04329"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fcam" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="bcam">
+    <inertial>
+      <origin
+        xyz="0.019997 0.01129 0.0068148"
+        rpy="0 0 0" />
+      <mass
+        value="0.043612" />
+      <inertia
+        ixx="4.2948E-06"
+        ixy="-8.8548E-10"
+        ixz="-1.0183E-09"
+        iyy="2.2106E-05"
+        iyz="2.1758E-08"
+        izz="2.3571E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/bcam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/bcam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bcam"
+    type="continuous">
+    <origin
+      xyz="-0.020898 -0.114 -0.020898"
+      rpy="2.3562 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="bcam" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="lide">
+    <inertial>
+      <origin
+        xyz="-0.078493 0.74443 0.13345"
+        rpy="0 0 0" />
+      <mass
+        value="0.073085" />
+      <inertia
+        ixx="1.9581E-05"
+        ixy="-4.2839E-07"
+        ixz="1.0393E-07"
+        iyy="4.1418E-05"
+        iyz="-9.4271E-09"
+        izz="2.4125E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/lide.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Al profile 개선/meshes/lide.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lide"
+    type="fixed">
+    <origin
+      xyz="-0.10595 0.036835 -0.68449"
+      rpy="1.5708 0 -0.0026238" />
+    <parent
+      link="base_link" />
+    <child
+      link="lide" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
